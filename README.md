@@ -4,15 +4,25 @@ Laravel12でredisを用いた構成を構築する
 
 ## 環境
 
-- php: 
+- php
 - composer
 - node
 - npm
 
 ## 使い方
 
+### docker環境起動
+
 srcディレクトリに入り、以下のコマンドを実行してください
 
 ```bash
-composer run dev
+./vendor/bin/sail up -d
+```
+
+## 初期構築(初回のみ)
+
+docker環境起動後、以下のコマンドを実行してDBマイグレーションを行ってください
+
+```bash
+sail exec laravel.test php artisan migrate
 ```
