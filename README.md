@@ -26,3 +26,10 @@ docker環境起動後、以下のコマンドを実行してDBマイグレーシ
 ```bash
 sail exec laravel.test php artisan migrate
 ```
+
+## TIPS
+
+### DBクライアントツール
+
+Docker環境にadminerが含まれています
+- http://localhost:8080/
