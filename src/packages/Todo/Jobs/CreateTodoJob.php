@@ -24,7 +24,7 @@ class CreateTodoJob implements ShouldQueue
      * Execute the job.
      *
      * @param  LogManager  $logger  Logger
-     * @param  CreateTodoUsecase  $useCase  UseCase
+     * @param  CreateTodoUseCase  $useCase  UseCase
      */
     public function handle(
         LogManager $logger,
