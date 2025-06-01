@@ -3,16 +3,19 @@
 namespace Packages\Todo\UseCases;
 
 use Illuminate\Log\Logger;
+use Illuminate\Log\LogManager;
 
 /**
  * CreateTodo UseCase
  */
 readonly class CreateTodoUseCase
 {
+    /**
+     * @param  LogManager  $logger  Logger
+     */
     public function __construct(
-        private Logger $logger
-    ) {
-    }
+        private LogManager $logger
+    ) {}
 
     /**
      * Invoke.
