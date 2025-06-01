@@ -27,6 +27,12 @@ docker環境起動後、以下のコマンドを実行してDBマイグレーシ
 sail exec laravel.test php artisan migrate
 ```
 
+テストデータをseederで投入してください
+
+```bash
+sail exec laravel.test php artisan db:seed
+```
+
 ## TIPS
 
 ### DBクライアントツール
