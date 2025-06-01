@@ -17,7 +17,7 @@ class TodoFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->prefecture() . fake()->city() . 'に行く',
+            'title' => fake()->prefecture().fake()->city().'に行く',
             'description' => fake()->realText(),
         ];
     }

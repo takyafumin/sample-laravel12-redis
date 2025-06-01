@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTodoRequest;
 use App\Http\Requests\UpdateTodoRequest;
 use App\Models\Todo;
+use Illuminate\Http\RedirectResponse;
+use Packages\Todo\Jobs\CreateTodoJob;
 
 /**
  * Todo Controller
@@ -12,7 +14,7 @@ use App\Models\Todo;
 class TodoController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Todo 一覧表示
      */
     public function index(): \Illuminate\View\View
     {
@@ -22,11 +24,15 @@ class TodoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Todo 作成
      */
-    public function create()
+    public function create(): RedirectResponse
     {
-        //
+        // CreateTodoJobをdispatchする
+        CreateTodoJob::dispatch();
+
+        return redirect()
+            ->route('todo.index');
     }
 
     /**

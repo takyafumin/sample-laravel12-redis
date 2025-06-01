@@ -1,7 +1,4 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
-
 // Todo機能
-Route::get('/', [TodoController::class, 'index']);
+require __DIR__.'/../packages/Todo/Presentation/route.php';
