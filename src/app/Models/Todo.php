@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Todo Model
- * 
+ *
  * @property int $id ID
  * @property string $title タイトル
  * @property string|null $description 説明
